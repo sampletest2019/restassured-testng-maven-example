@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 @Test(groups="RickAndMortyGet")
-public class testGetCharactersMultiple {
+public class TestGetCharactersMultiple {
     String baseURI = "https://rickandmortyapi.com/api";
     String characterResource = "/character";
 
@@ -21,7 +21,6 @@ public class testGetCharactersMultiple {
                 {"Rick", "Dead"}
         };
     }
-
 
     @Description("validating response name and status based on the parameters")
     @Test(dataProvider = "name and status")

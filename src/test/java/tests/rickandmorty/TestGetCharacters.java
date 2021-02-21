@@ -1,5 +1,6 @@
 package tests.rickandmorty;
 
+import io.qameta.allure.Description;
 import io.restassured.RestAssured.*;
 import io.restassured.matcher.RestAssuredMatchers.*;
 import org.hamcrest.Matchers.*;
@@ -12,10 +13,11 @@ import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
 
 @Test(groups="RickAndMortyGet")
-public class testGetCharacters {
+public class TestGetCharacters {
     String baseURI = "https://rickandmortyapi.com/api";
     String characterResource = "/character";
 
+    @Description("validate status code is 200")
     @Test
     public void validateApiStatusCode() {
         when()
@@ -25,6 +27,7 @@ public class testGetCharacters {
                 .statusCode(200);
     }
 
+    @Description("validate characters count and number of pages in the response")
     @Test
     public void validateCountAndPagesNumber(){
         when()
