@@ -5,8 +5,6 @@ import org.json.JSONObject;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
-import static org.hamcrest.Matchers.equalTo;
 
 @Test(groups="JsonPlaceholderPost")
 public class TestPostPosts {

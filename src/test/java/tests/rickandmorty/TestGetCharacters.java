@@ -1,15 +1,9 @@
 package tests.rickandmorty;
 
 import io.qameta.allure.Description;
-import io.restassured.RestAssured.*;
 import io.restassured.http.ContentType;
-import io.restassured.matcher.RestAssuredMatchers.*;
-import org.hamcrest.Matchers.*;
-import io.restassured.module.jsv.JsonSchemaValidator.*;
-import org.testng.*;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.when;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.equalTo;
