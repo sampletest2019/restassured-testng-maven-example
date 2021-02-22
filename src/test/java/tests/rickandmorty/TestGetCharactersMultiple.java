@@ -25,8 +25,11 @@ public class TestGetCharactersMultiple {
     @Description("validating response name and status based on the parameters")
     @Test(dataProvider = "name and status")
     public void validateNameAndStatusFilterParameters(String name, String status){
+        given()
+                .queryParam("name", name)
+                .queryParam("status", status).
         when()
-                .get(baseURI+characterResource+"/?"+"name="+name+"&"+"status="+status)
+                .request("GET",baseURI+characterResource)
                 .then()
                 .log().all()
                 .statusCode(200)
