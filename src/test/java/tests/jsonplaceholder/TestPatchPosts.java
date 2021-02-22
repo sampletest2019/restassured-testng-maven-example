@@ -6,27 +6,25 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-@Test(groups="JsonPlaceholderPut")
-public class TestPutPosts {
+@Test(groups="JsonPlaceholderPatch")
+public class TestPatchPosts {
     String baseURI = "https://jsonplaceholder.typicode.com";
     String postsResource = "/posts";
 
     JSONObject jsonObj = new JSONObject()
-            .put("id", 1)
-            .put("title","foo")
-            .put("body","bar")
-            .put("userId", 1);
+            .put("title","foo");
 
-    @Description("validate status response for PUT is 200 as resource does not exist")
+    @Description("validate status response for PATCH is 200")
     @Test
-    public void validatePostStatusResponse() {
+    public void validatePatchStatusResponse() {
         given()
-                .pathParams("postId", "1")
                 .header("Content-type", "application/json")
+                .pathParams("postId", "1")
                 .body(jsonObj.toString())
                 .when()
-                .request("PUT", baseURI + postsResource + "/{postId}")
+                .request("PATCH", baseURI + postsResource + "/{postId}")
                 .then()
                 .statusCode(200);
     }
+
 }

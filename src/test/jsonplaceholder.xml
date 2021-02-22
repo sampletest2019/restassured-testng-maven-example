@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="JSONPlaceholder Test" verbose="1">
+    <test name="JSONPlaceholder">
+            <classes>
+                <class name="tests.jsonplaceholder.TestGetPosts"/>
+                <class name="tests.jsonplaceholder.TestPostPosts"/>
+                <class name="tests.jsonplaceholder.TestPutPosts"/>
+                <class name="tests.jsonplaceholder.TestPatchPosts"/>
+                <class name="tests.jsonplaceholder.TestDeletePosts"/>
+            </classes>
+    </test>
+</suite>

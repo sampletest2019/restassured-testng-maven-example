@@ -1,2 +1,7 @@
-/Users/yuriyfromrussia/IdeaProjects/java-restapi-testing/src/test/java/utils/RestUtils.java
-/Users/yuriyfromrussia/IdeaProjects/java-restapi-testing/src/test/java/tests/rickandmorty/testGetCharacters.java
+/Users/yuriyfromrussia/IdeaProjects/java-restapi-testing/src/test/java/tests/rickandmorty/TestGetCharactersMultiple.java
+/Users/yuriyfromrussia/IdeaProjects/java-restapi-testing/src/test/java/tests/jsonplaceholder/TestPostPosts.java
+/Users/yuriyfromrussia/IdeaProjects/java-restapi-testing/src/test/java/tests/jsonplaceholder/TestPatchPosts.java
+/Users/yuriyfromrussia/IdeaProjects/java-restapi-testing/src/test/java/tests/jsonplaceholder/TestDeletePosts.java
+/Users/yuriyfromrussia/IdeaProjects/java-restapi-testing/src/test/java/tests/rickandmorty/TestGetCharacters.java
+/Users/yuriyfromrussia/IdeaProjects/java-restapi-testing/src/test/java/tests/jsonplaceholder/TestGetPosts.java
+/Users/yuriyfromrussia/IdeaProjects/java-restapi-testing/src/test/java/tests/jsonplaceholder/TestPutPosts.java

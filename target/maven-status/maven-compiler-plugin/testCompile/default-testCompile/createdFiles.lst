@@ -1,2 +1,1 @@
-tests/rickandmorty/testGetCharacters.class
-utils/RestUtils.class
+tests/rickandmorty/TestGetCharacters.class
