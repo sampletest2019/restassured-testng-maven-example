@@ -3,6 +3,7 @@ package tests.rickandmorty;
 import io.qameta.allure.Description;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import tests.enums.RickAndMortyEndpoints;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
@@ -10,8 +11,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 @Test(groups="RickAndMortyGet")
 public class TestGetCharactersMultiple {
-    String baseURI = "https://rickandmortyapi.com/api";
-    String characterResource = "/character";
+    String characterEndpoint = RickAndMortyEndpoints.RICK_AND_MORTY_CHARACTER.getValue();
 
     @DataProvider(name = "name and status")
     public static Object[][] nameAndStatus() {
@@ -29,7 +29,7 @@ public class TestGetCharactersMultiple {
                 .queryParam("name", name)
                 .queryParam("status", status).
         when()
-                .request("GET",baseURI+characterResource)
+                .request("GET",characterEndpoint)
                 .then()
                 .log().all()
                 .statusCode(200)
